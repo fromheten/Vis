@@ -18,9 +18,13 @@ Since all functions are pure they can be shared. But what fun is software if you
 * なんだけ　なんだけ
 
 ## Type safety
-Vis functions are annotated with types - and can be checked for correctness. This makes for less bugs, but even more importantly that let's your programming environment display all possible functions you can insert at any point
+Vis functions are annotated with types - and can be checked for correctness. This makes for less bugs, but even more importantly that let's your programming environment display all possible functions you can insert at any point. 
 
-``` ascii art
+This illustrations shows one possible way to do this - when focus is in the argument list for the `increase-account-balance` function, suggestions of function returning the expected type are shown. That can be nice, and very fun :).
+
+```
+ ---------------------------------------------------------------------------------------------------
+ X - ロ Vis Editor - Text Mode
  ---------------------------------------------------------------------------------------------------
 | (defun increase-account-balance     | Suggestions                                                 |
 |   [Account acc Num num]             | ===========                                                 |
@@ -30,12 +34,10 @@ Vis functions are annotated with types - and can be checked for correctness. Thi
 |                                     | ...                                                         |
 |                                     | ...                                                         |
 |                                     | ...                                                         |
- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ ---------------------------------------------------------------------------------------------------
+
 ```
 
-This illustrations shows one possible way to do this - when focus is in the argument list for the `increase-account-balance` function, suggestions of function returning the expected type are shown. That can be nice, and very fun :).
-
-With types and graphical programming,
 
 ## How is Vis edited?
 Vis is programs represented as trees. Nothing new. The tree can be generated from parsing a text file or text input to a repl. It can also be made in a graphical program, maybe where users drag things into the argument list like you assemble a puzzle from pieces that fit. Graphical and Textual representation - it's just trees!
